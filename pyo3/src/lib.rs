@@ -146,7 +146,7 @@ fn get_fibonacci(number: isize) -> PyResult<u128> {
 /// the `lib.name` setting in the `Cargo.toml`, else Python will not be able to
 /// import the module.
 #[pymodule]
-fn rust(_py: Python, m: &PyModule) -> PyResult<()> {
+fn pyo3_samples(_py: Python, m: &PyModule) -> PyResult<()> {
     // pyo3_log::init();
     m.add_function(wrap_pyfunction!(sum_as_string, m)?)?;
     m.add_function(wrap_pyfunction!(multiply, m)?)?;
